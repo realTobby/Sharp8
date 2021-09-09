@@ -37,8 +37,7 @@ namespace Sharp8
             while (_window.IsOpen)
             {
                 _window.DispatchEvents();
-                _window.Clear(Color.Black);
-
+                
                 chip8.Tick();
 
                 _window.Display();
@@ -65,6 +64,7 @@ namespace Sharp8
 
         static void Draw(bool[,] buffer)
         {
+            _window.Clear(Color.Black);
             //var bits = screen.LockBits(new Rectangle(0, 0, screen.Width, screen.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
 
             //unsafe
