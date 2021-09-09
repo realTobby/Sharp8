@@ -26,7 +26,7 @@ namespace Sharp8
         {
             chip8 = new CPUEight(Draw, Beep);
 
-            chip8.LoadProgram(System.IO.File.ReadAllBytes("particle.ch8"));
+            chip8.LoadProgram(System.IO.File.ReadAllBytes("breakout.ch8"));
             Console.WriteLine("==================");
 
             _window = new RenderWindow(new VideoMode((uint)chip8.GetScreenWidth(), (uint)chip8.GetScreenHeight()), "Sharp8 by github.com/realTobby");
